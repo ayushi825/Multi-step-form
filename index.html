@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi step form using HTML,CSS,javascript</title>
+    <!-- <link rel="stylesheet" href="form.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        /* body{
+    text-align: center;
+} */
+        .container {
+            width: 360px;
+            height: 900px;
+            /* display: flex; */
+            margin: 0 auto;
+            border-radius: 2px;
+            position: relative;
+            /* overflow: scroll; */
+
+
+            overflow-x: hidden;
+            /* overflow: hidden; */
+            /* overflow-y: hidden; */
+
+        }
+
+        .container form {
+            width: 280px;
+            /* height: 500px; */
+            margin: 5px auto;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 10px;
+            position: absolute;
+            /* top: 100px; */
+            left: 30px;
+
+            transition: .5s;
+
+        }
+
+
+
+        .btn {
+            width: 100%;
+            margin: 30px auto;
+            text-align: center;
+
+
+        }
+
+        form .Btn {
+            width: 110px;
+            height: 35px;
+            margin: 0 10px;
+            background: orange;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #form1 {
+            height: 550px;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+
+            z-index: 35;
+        }
+
+        #form2 {
+            position: absolute;
+            height: 380px;
+            text-align: center;
+            padding: 15px;
+            left: 4500px;
+
+
+        }
+
+        #form3 {
+            position: absolute;
+            height: 800px;
+            text-align: center;
+            padding: 15px;
+            left: 4500px;
+
+
+        }
+
+        ul li {
+            list-style: none;
+
+            text-align: center;
+        }
+
+        h2 {
+
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="form1" action="#">
+            <h2>STEP1</h2>
+            <label for="Profile">Profile Picture:</label>
+            <div>
+                <input type="file" name="Profile_pics" id="profile">
+            </div>
+
+            <label for="fname">First Name:</label>
+            <div>
+                <input type="text" name="f_name" id="fname" >
+            </div>
+
+            <label for="lname">Last Name:</label>
+            <div>
+                <input type="text" name="l_name" id="lname">
+            </div>
+            <legend>Gender:</legend>
+
+            <ul>
+                <li>
+                    <label for="gender">Male</label>
+                    <input type="radio" name="mygender" id="gender">
+                </li>
+                <li>
+                    <label for="gender">Female</label>
+                    <input type="radio" name="mygender" id="gender">
+                </li>
+                <li>
+                    <label for="gender">Others</label>
+                    <input type="radio" name="mygender" id="gender">
+                </li>
+            </ul>
+
+
+
+            <label for="dob">Birth Date:</label>
+            <div>
+                <input type="date" name="date of birth" id="dob">
+            </div>
+            <label for="age">Age:</label>
+            <div>
+                <input type="number" name="Number" id="age">
+            </div>
+            <legend>Choose your multiple hobbies:</legend>
+
+            <ul>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Cycling</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Singing</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Playing </label>
+                </li>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Reading</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Art&Craft</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="myhobby" id="hobbies">
+                    <label for="hobbies">Others</label>
+                </li>
+            </ul>
+
+            <div class="btn">
+                <input class="Btn" id="next1" type="button" value="Next">
+            </div>
+
+
+        </form>
+
+
+        <form id="form2" action="#">
+            <h2>STEP2</h2>
+            <label for="Email">Email Id:</label>
+            <div>
+                <input type="email" name="" id="Email">
+            </div>
+            <label for="phone">Phone Number:</label>
+            <div>
+                <input type="tel" name="phone_number" id="phone">
+            </div>
+            <label for="">Password:</label>
+            <div>
+                <input type="password" name="pass" id="Password">
+            </div>
+            <label for="confirmpassword">Confirm Password:</label>
+            <div>
+                <input type="password" name="pass" id="confirmpassword">
+            </div>
+            <label for="college">College Name:</label>
+            <div>
+                <input type="text" name="collage" id="college">
+            </div>
+            <label for="branch">College Department:</label>
+            <div>
+
+
+                <select name="Branch" id="branch">Department:
+                    <option value="">Please choose an option..</option>
+                    <option value="CSE">Computer Science and Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="EE">Electrical Engineering</option>
+                    <option value="ECE">Electronic And Communication Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                </select>
+            </div>
+            <label for="college-id">College Id:</label>
+            <div>
+                <input type="text" name="" id="college-id">
+            </div>
+
+
+            <div class="btn">
+                <input class="Btn" id="prev1" type="button" value="Prev">
+                <input class="Btn" id="next2" type="button" value="Next">
+            </div>
+
+        </form>
+        <form id="form3" action="#">
+            <h2>STEP3</h2>
+            <label for="country">Country:</label>
+            <div>
+                <input type="text" name="country_name" id="country">
+            </div>
+            <label for="state">State:</label>
+            <div>
+                <input type="text" name="state_name" id="state">
+            </div>
+
+            <label for="city">City:</label>
+            <div>
+                <input type="text" name="city_name" id="city">
+            </div>
+            <label for="pin">Pincode:</label>
+            <div>
+                <input type="text" name="pincode" id="pin">
+
+            </div>
+            <label for="address1">Address1:</label>
+            <div>
+                <textarea name="myText" id="address1" cols="30" rows="10"></textarea>
+            </div>
+            <label for="address2">Address2:</label>
+            <div>
+                <textarea name="myText" id="address2" cols="30" rows="10"></textarea>
+            </div>
+            <label for="WAS"> write about yourself:</label>
+            <div>
+
+                <textarea name="myText" id="WAS" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btn">
+                <input class="Btn" id="prev2" type="button" value="Prev">
+
+                <input class="Btn" id="myform" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script>
+        var form1 = document.getElementById("form1");
+        var form2 = document.getElementById("form2");
+        var form3 = document.getElementById("form3");
+
+
+        var next1 = document.getElementById("next1");
+        var next2 = document.getElementById("next2");
+        var prev1 = document.getElementById("prev1");
+        var prev2 = document.getElementById("prev2");
+        next1.onclick = function () {
+            form1.style.left = "-450px";
+            form2.style.left = "40px";
+        }
+
+        prev1.onclick = function () {
+            form1.style.left = "40px";
+            form2.style.left = "450px";
+        }
+
+        next2.onclick = function () {
+            form2.style.left = "-450px";
+            form3.style.left = "40px";
+        }
+        prev2.onclick = function () {
+            form2.style.left = "40px";
+            form3.style.left = "450px";
+        }
+        // document.getElementById("myform").submit();
+        const myform1 = document.getElementsByClassName("container");
+        myform1.addEventListener("submit", (e) =>{
+            e.preventDefault();
+            console.log("form has been submitted");
+        });
+
+    </script>
+</body>
+
+</html>
